@@ -13,8 +13,8 @@ body{
     background-color: rgb(255, 0, 0);
     color: rgb(3, 3, 3);
     display: flex;
-    justify-cotent: space-around;
-    aling-itens: center;
+    justify-content: space-around;
+    align-items: center;
     padding: 24px 0;
 }
 
@@ -65,7 +65,7 @@ body{
 }
 
 .estudante-div{
-    text-aling: center;
+    text-align: center;
     padding: 16px 0;
 }
 .estudante-titulo {
