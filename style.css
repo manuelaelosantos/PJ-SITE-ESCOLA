@@ -1,89 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
+    }
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb,#e0f6ff );
 }
 
-body{
-    font-family: "Lato", sans-serif;
+.pipe {
+ position: absolute;
+ bottom: 0;
+ width: 80px;
+ animation: pipe-animation 1.5s infinite linear;
 }
 
-.cabecalho{
-    background-color: rgb(255, 0, 0);
-    color: rgb(3, 3, 3);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 24px 0;
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
 }
 
-.cabecalho-imagem {
-    width: 100px;
-    height: 90px;
-    border-radius: 50%;
-}
-.cabecalho-lista-item{
-    display: inline-block;
-    margin: 0 16px;
-    font-size: 20px;
+.jump {
+ animation: jump 500ms ease-out;
 }
 
-.escola-imagem{
-    width: 30%;
+.nuvem {
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
 }
 
-
-.escola {
-    background-image: linear-gradient(#424E61,#16CFF8);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 0;
-}
-
-.escola-conteudo{
-    width: 35%;
-}
-
-.escola-titulo{
-    padding: 24px 0;
-}
-
-.estudante{
-    padding: 24px 0;
-}
-
-.estudante-imagem{
-    width: 120px;
-}
-
-.estudante-icone {
-    width: 24px;
-    padding: 4px 8px;
-}
-
-.estudante-div{
-    text-align: center;
-    padding: 16px 0;
-}
-.estudante-titulo {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.estudantes-todos {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-}
-
-.rodape{
-background-color: black;
-color: white;
-text-align: center;
-}
-
-.rodape-icone {
+@keyframes pipe-animation{
+    from {
+        right: -80px;
+    }
     
+    to {
+        right: 100%;
+    }
+}  
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
 }
